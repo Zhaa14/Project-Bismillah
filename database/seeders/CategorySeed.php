@@ -15,9 +15,9 @@ class CategorySeed extends Seeder
     public function run()
     {
         $categories = [
-            ['name' => 'fullstack',],
-            ['name' => 'backend',],
-            ['name' => 'frontend',],
+            ['name' => 'Mobile Legend',],
+            ['name' => 'Free Fire',],
+            ['name' => 'PlayerUnknowns Battlegrounds',],
         ];
 
         Category::insert($categories);

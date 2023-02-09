@@ -125,7 +125,7 @@
                         <div class="col-12">
                             <div class="form-group">
                                 <label for="salary">salary</label>
-                                <input class="form-control" id="salary" type="number" name="salary" value="{{ old('salary') }}">
+                                <input class="form-control" id="salary" type="text" name="salary" value="{{ old('salary') }}">
                                 @error('salary')<span class="text-danger">{{ $message }}</span>@enderror
                             </div>
                         </div>

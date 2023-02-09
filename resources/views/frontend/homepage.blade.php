@@ -7,7 +7,7 @@
         <div class="row fullscreen d-flex align-items-center justify-content-center">
             <div class="banner-content col-lg-12">
                 <h1 class="text-white">
-                    <span>1500+</span> Jobs posted last week				
+                    <span>1500+</span> Lowongan Gaming Terbaru Ada Disini				
                 </h1>	
                 <form action="{{ route('search') }}" class="serach-form-area">
                     <div class="row justify-content-center form-wrap">
@@ -17,7 +17,7 @@
                         <div class="col-lg-3 form-cols">
                             <div class="default-select" id="default-selects">
                                 <select name="location">
-                                    <option value="0">All Areas</option>
+                                    <option value="0">Cari Berdasarkan Wilayah</option>
                                     @foreach($searchLocations as $id=>$searchLocations)
                                         <option value="{{ $id }}">{{ $searchLocations }}</option>
                                     @endforeach
@@ -27,7 +27,7 @@
                         <div class="col-lg-3 form-cols">
                             <div class="default-select" id="default-selects2">
                                 <select name="category">
-                                    <option value="0">All Categories</option>
+                                    <option value="0">Cari Berdasarkan Game</option>
                                     @foreach($searchCategories as $id=>$searchCategories)
                                         <option value="{{ $id }}">{{ $searchCategories }}</option>
                                     @endforeach
@@ -36,16 +36,11 @@
                         </div>
                         <div class="col-lg-2 form-cols">
                             <button type="submit" class="btn btn-info">
-                              <span class="lnr lnr-magnifier"></span> Search
+                              <span class="lnr lnr-magnifier"></span> Cari
                             </button>
                         </div>								
                     </div>
                 </form>	
-                <p class="text-white"> <span>Search by categories:</span>
-                    @foreach($searchByCategory as $id => $searchByCategory)
-                        <a href="{{ route('category.show', $id) }}" class="text-white">{{ $searchByCategory }}</a>@if (!$loop->last),@endif
-                    @endforeach
-                </p>
             </div>											
         </div>
     </div>
@@ -53,7 +48,7 @@
 @endsection
 
 @section('content')
-<h3 class="mb-3">top rated job posts</h3>
+<center><h3 class="mb-3">Postingan pekerjaan paling populer</h3></center>
 <div class="row mb-5">
     @foreach($top_rates as $top_rate)
     <div class="col-lg-4">
@@ -79,7 +74,7 @@
 <div class="row mb-5">
     <div class="col-lg-6 sidebar">
         <div class="single-slidebar">
-            <h4>Jobs by Location</h4>
+            <h4>Pekerjaan berdasarkan wilayah</h4>
             <ul class="cat-list">
                 @foreach($locations as $location)
                     <li><a class="justify-content-between d-flex" href="{{ route('location.show', $location->id) }}"><p>{{ $location->name }}</p><span> {{$location->jobs_count}} </span></a></li> 
@@ -89,7 +84,7 @@
     </div>
     <div class="col-lg-6 sidebar">
         <div class="single-slidebar">
-            <h4>Jobs by Category</h4>
+            <h4>Pekerjaan berdasarkan kategori</h4>
             <ul class="cat-list">
                 @foreach($categories as $category)
                     <li><a class="justify-content-between d-flex" href="{{ route('category.show', $category->id) }}"><p>{{ $category->name }}</p><span> {{$category->jobs_count}} </span></a></li> 
@@ -98,14 +93,14 @@
         </div>	
     </div>
 </div>
-<h3>All jobs</h3>
+<center><h3>Semua Pekerjaan</h3></center>
 <div class="row justify-content-center d-flex">
     <div class="col-lg-12 post-list justify-content-center">
            @foreach($jobs as $job)
                 <div class="single-post d-flex flex-row align-items-center" style="column-gap: 4rem;">
                     @if($job->company->logo)
                         <div class="thumb">
-                            <img src="{{ Storage::url('images/companies/'. $job->company->logo) }}" alt="">
+                            <img class="im" src="{{ Storage::url('images/companies/'. $job->company->logo) }}" alt="">
                         </div>
                     @else
                         <div class="thumb">
@@ -128,7 +123,7 @@
                     </div>
                 </div>  
            @endforeach
-        <a class="text-uppercase loadmore-btn mx-auto d-block" href="{{ route('job.index') }}">Load More Job Posts</a>
+        <a class="text-uppercase loadmore-btn mx-auto d-block" href="{{ route('job.index') }}">Muat Lebih Banyak Pekerjaan</a>
     </div>	
 </div>
 @endsection

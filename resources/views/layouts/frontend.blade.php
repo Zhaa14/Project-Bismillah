@@ -22,7 +22,7 @@
                 <div class="row align-items-center justify-content-between d-flex">
                     <div id="logo">
                     <a href="{{ route('homepage') }}"><img width="161" src="{{ asset('img/logo.png') }}" alt="" title="" /></a>
-                    </div>
+                </div>
                 </div>
             </div>
         </header>
@@ -57,9 +57,7 @@
             <div class="container">
                 <div class="row d-flex justify-content-between">
                     <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Raja Putra Permana</a>
                     </p>
                 </div>
             </div>
